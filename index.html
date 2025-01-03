@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhiim Ali - Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-content">
+                <h1>Muhiim Ali</h1>
+                <div class="subtitle">Software Engineer & Researcher</div>
+                <div class="about-description">
+                    <h2>About Me</h2>
+                    <p>Hey! I'm currently a senior at Brown University studying computer science.</p>
+                    <div class="about-details">
+                        <p>My passion lies in using AI to create meaningful solutions to real-world problems. Coming from a low-income background and being a first-generation college student, I've made it my mission to make tech more welcoming and accessible. I especially love sharing my knowledge through teaching and mentoring.
+
+                        When I'm not coding, you'll probably find me staying active - whether that's hitting the gym, playing pickup sports, or going for a run to clear my mind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            
+            <!-- Fall 2024 -->
+            <div class="timeline-section">
+                <h3 class="timeline-header">Fall 2024</h3>
+                <div class="card-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                           <img src="assets/images/bert.png" alt="BERT Project" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4>BERT Question-Answering System</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Bert</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <p class="project-description">This project implements a fine-tuned BERT model for Question Answering (QA) that can extract precise answers from given context passages or determine if no answer exists. The system achieves competitive performance metrics (P=61.3%, R=47.9%, F1=53.8%) by implementing custom loss functions and sophisticated data preprocessing techniques based on the "A BERT Baseline for the Natural Questions" paper.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/MuhiimAli/bert-qa-system" class="button">GitHub</a>
+                                <!-- <a href="#" class="button">Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                             <div class="project-image">
+                           <img src="assets/images/reddit.png" alt="reddit depression detection" class="card-img">
+                        </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Reddit Depression Detection</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                            <p class="project-description">Built a machine learning system that helps detect signs of depression in Reddit posts. The project analyzes text data using two different methods - LDA topic modeling and RoBERTa embeddings - to train a set of random forest classifiers. Each classifier is trained to recognize specific symptoms by comparing mental health-related posts against regular social media content.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/MuhiimAli/reddit-depression-detection" class="button">GitHub</a>
+                                <!-- <a href="#" class="button">Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Spring 2024 -->
+            <div class="timeline-section">
+                <h3 class="timeline-header">Spring 2024</h3>
+                <div class="card-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                           <img src="assets/images/price_predictor.png" alt="BERT Project" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4>Craigslist Item Price Predictor</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Data Engineering & Analysis</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                            <p class="project-description">Created a machine learning system to predict second-hand item prices on Craigslist using multi-modal data analysis. The project combines computer vision and NLP techniques by processing both item images and text descriptions. Using a gradient boosting regressor, the system analyzes features extracted from VGG16 for images and spaCy embeddings for text, along with categorical data like location and item category to predict market prices.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/MuhiimAli/craigslist-price-predictor" class="button">GitHub</a>
+                                <a href="https://drive.google.com/file/d/14xADJ0YeMklAgFaLYL-CaZ_tvxZJA97i/view?usp=sharing" class="button">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/forge.png" alt="Gale-Shapley Algorithm Visualization" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4>Gale-Shapley Algorithm Implementation</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Forge</span>
+                                <span class="tech-tag">Data Structures</span>
+                                <span class="tech-tag">Algorithm</span>
+                            </div>
+                            <p class="project-description">
+                                Built an interactive visualizer to explore the Gale-Shapley matching algorithm, used in systems like college admissions and job matching. Created using Forge modeling language, the project demonstrates how the algorithm finds optimal matches between two groups while examining interesting behaviors like strategic preference ranking.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/MuhiimAli/gale_shapley" class="button">GitHub</a>
+                                <a href="https://www.youtube.com/watch?v=VvZgK1gxtIQ" class="button">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- Fall 2022 -->
+            <div class="timeline-section">
+                <h3 class="timeline-header">Fall 2022</h3>
+                <div class="card-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                           <img src="assets/images/portfolio.png" alt="UI/UX Project" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h4>UI/UX Portfolio</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">UI/UX Design</span>
+                                <span class="tech-tag">Frontend Development</span>
+                            </div>
+                            <p class="project-description">In my UI/UX course at Brown, I designed and developed responsive web interfaces focused on user experience principles. The project involved analyzing existing websites, conducting user research, and implementing redesigns optimized for both desktop and mobile platforms. Created iterative prototypes incorporating user feedback and accessibility standards to deliver intuitive, user-centered designs.</p>
+                            <div class="project-links">
+                                <a href="https://muhiim-mali37.github.io/portfolio/" class="button">Website Link</a>
+                                <a href="https://github.com/Muhiim-Mali37/portfolio.git" class="button">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Fall 2021 -->
+            <div class="timeline-section">
+                <h3 class="timeline-header">Fall 2021 - Spring 2022</h3>
+                <div class="card-grid">
+                   <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/evolution.png" alt="Evolution Arcade Games" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h4>Evolution Arcade Games</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Game Dev</span>
+                        </div>
+                        <p class="project-description">
+                            Developed a Java arcade system featuring reimagined classics like Flappy Bird, Snake, and Tetris. The project showcases object-oriented design through multiple game modes, including an innovative multiplayer Flappy Bird and an AI-learning mode where the bird evolves through gameplay.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/MuhiimAli/evolution" class="button">GitHub</a>
+                            <a href="https://drive.google.com/file/d/1OH01yFO5Vc90y0bCmS7xV_Xrm4AyUvVl/view?usp=sharing" class="button">Demo</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                             <div class="project-image">
+                           <img src="assets/images/pagerank.jpeg" alt="Search Project" class="card-img">
+                        </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Search</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Data Structures</span>
+                                <span class="tech-tag">Algorithm</span>
+                            </div>
+                            <p class="project-description">Built a search engine that processes XML documents and ranks search results using TF-IDF and PageRank algorithms. The project implements both an indexer to process and store document information, and a query system that handles user searches. The search engine features customizable ranking methods, allowing results to be sorted based on term relevance alone or combined with PageRank scores.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/MuhiimAli/search" class="button">GitHub</a>
+                                <!-- <a href="#" class="button">Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <h2>Research Work</h2>
+            <!-- <div class="card-grid">
+                <div class="research-card">
+                    <div class="card-content">
+                        <h3>CLEAR GLASS: 🍷Contrastive Learning with Enhanced Abstract Representations</h3>
+                        <p class="date">Dec 2024 - Present</p>
+                        <span class="status">Ongoing</span>
+                        <p class="description">Current research focus and description.</p>
+                    </div>
+                </div> -->
+                <div class="research-card">
+                    <div class="card-content">
+                        <h3>DRIVE (Dynamic Relation Inference via Verb Embeddings)</h3>
+                        <p class="date">May 2024 - Nov 2024</p>
+                        <span class="status">Under Publication</span>
+                        <p class="description">Developed a novel method to enhance computer vision models' understanding of visual relationships, focusing on CLIP architecture. Created CROCO, a specialized dataset derived from COCO with refined text-image pairs, distinguishing between static and dynamic relationships. Implemented a new contrastive loss function that significantly improved performance over existing models.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

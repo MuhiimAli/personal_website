@@ -100,15 +100,27 @@
       width: 150px;
     }
 
-    .home-photo img {
+    .photo-rotator {
+      position: relative;
+      width: 150px;
+      height: 190px;
+    }
+
+    .photo-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 150px;
       height: 190px;
       object-fit: cover;
       object-position: center 35%;
       display: block;
-      filter: grayscale(100%) contrast(1.05);
       border: 1px solid var(--photo-border);
+      opacity: 0;
+      transition: opacity 0.9s ease;
     }
+
+    .photo-slide.active { opacity: 1; }
 
     .home-photo-caption {
       font-size: 10px;
@@ -337,8 +349,15 @@
   <div class="page active" id="page-home">
     <div class="home-header">
       <div class="home-photo">
-        <img src="assets/images/muhiim2.jpeg" alt="Muhiim Ali" />
-        <!-- <p class="home-photo-caption">Somaliland → Providence</p> -->
+        <div class="photo-rotator">
+          <img class="photo-slide active" src="assets/images/muhiim2.jpeg" alt="Muhiim Ali" />
+          <img class="photo-slide" src="assets/images/1.jpeg" alt="Muhiim Ali" />
+          <img class="photo-slide" src="assets/images/2.JPG" alt="Muhiim Ali" />
+          <img class="photo-slide" src="assets/images/3.jpeg" alt="Muhiim Ali" />
+          <img class="photo-slide" src="assets/images/4.jpeg" alt="Muhiim Ali" />
+          <img class="photo-slide" src="assets/images/5.jpeg" alt="Muhiim Ali" />
+          <img class="photo-slide" src="assets/images/6.jpeg" alt="Muhiim Ali" />
+        </div>
       </div>
       <div class="home-title">
         <h1>hi, I'm <span class="accent">Muhiim<span class="tooltip">muhiim — important, in Somali</span></span>.</h1>
@@ -459,6 +478,15 @@
 </div>
 
 <script>
+  // Photo rotator
+  const slides = document.querySelectorAll('.photo-slide');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3500);
+
   function showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + name).classList.add('active');

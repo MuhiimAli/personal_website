@@ -6,383 +6,385 @@
   <title>Muhiim Ali</title>
   <style>
     :root {
-      --bg: #fafaf8;
-      --text: #1a1a18;
-      --muted: #6b6b67;
-      --faint: #c4c4be;
-      --accent: #2a2a28;
-      --link: #1a1a18;
-      --border: #e8e8e4;
+      --bg: #f5f2ed;
+      --text: #111008;
+      --muted: #4a4540;
+      --faint: #9a9088;
+      --accent: #b8860b;
+      --accent-light: #e8d5a0;
+      --border: #ccc8c0;
+      --photo-border: #888078;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      font-size: 16px;
-    }
+    html { font-size: 16px; }
 
     body {
-      background: var(--bg);
+      background: #e8e4dc;
       color: var(--text);
-      font-family: 'Georgia', serif;
+      font-family: 'Georgia', 'Times New Roman', serif;
       line-height: 1.7;
-      padding: 0 20px;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 40px auto;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--text);
+      padding: 40px 48px 56px;
     }
 
     /* NAV */
     nav {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
-      padding: 32px 0 0;
-      max-width: 640px;
-      margin: 0 auto;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--border);
     }
 
-    nav .logo {
-      font-size: 15px;
-      font-weight: normal;
-      font-family: 'Georgia', serif;
+    .logo {
+      font-size: 22px;
       color: var(--text);
       text-decoration: none;
       letter-spacing: 0.01em;
+      cursor: pointer;
     }
 
-    nav .links {
+    .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 6px;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
-    nav .links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 13px;
+    .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      letter-spacing: 0.02em;
+      cursor: pointer;
+      padding: 2px 0;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
     }
 
-    nav .links a:hover,
-    nav .links a.active {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: var(--text);
+      border-bottom-color: var(--text);
     }
 
-    /* MAIN */
-    main {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 80px 0 120px;
-    }
+    .nav-sep { color: var(--border); }
+
+    /* PAGES */
+    .page { display: none; }
+    .page.active { display: block; }
 
     /* HOME */
-    .home-intro h1 {
-      font-size: 28px;
+    .home-header {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .home-photo {
+      flex-shrink: 0;
+      width: 150px;
+    }
+
+    .home-photo img {
+      width: 150px;
+      height: 190px;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+      filter: grayscale(100%) contrast(1.05);
+      border: 1px solid var(--photo-border);
+    }
+
+    .home-photo-caption {
+      font-size: 10px;
+      color: var(--faint);
+      text-align: center;
+      margin-top: 6px;
+      letter-spacing: 0.06em;
+      font-style: italic;
+    }
+
+    .home-title h1 {
+      font-size: 26px;
       font-weight: normal;
-      font-family: 'Georgia', serif;
       color: var(--text);
-      margin-bottom: 20px;
+      margin-bottom: 6px;
       line-height: 1.3;
     }
 
-    .home-intro p {
-      font-size: 16px;
-      color: var(--text);
-      line-height: 1.8;
-      margin-bottom: 16px;
-      max-width: 560px;
-    }
-
-    .home-intro p.muted {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .name-meaning {
-      display: inline;
-      border-bottom: 1px dotted var(--faint);
+    .home-title h1 .accent {
+      color: var(--accent);
+      border-bottom: 1px dotted var(--accent);
       cursor: default;
       position: relative;
     }
 
-    .name-meaning .tooltip {
+    .home-title h1 .accent .tooltip {
       display: none;
       position: absolute;
       bottom: calc(100% + 6px);
       left: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--muted);
       white-space: nowrap;
-      font-style: normal;
       background: var(--bg);
       border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 4px;
+      padding: 3px 10px;
+      font-family: Georgia, serif;
+      font-style: italic;
     }
 
-    .name-meaning:hover .tooltip {
-      display: block;
-    }
+    .home-title h1 .accent:hover .tooltip { display: block; }
 
-    .currently {
-      margin-top: 32px;
-      padding-top: 28px;
-      border-top: 1px solid var(--border);
-    }
-
-    .currently p {
-      font-size: 14px;
+    .home-title .tagline {
+      font-size: 13px;
       color: var(--muted);
-      margin-bottom: 4px;
-      line-height: 1.6;
+      letter-spacing: 0.04em;
+      margin-bottom: 0;
+      font-style: italic;
     }
 
-    .home-links {
+    /* BIO */
+    .bio p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .bio p em { color: var(--accent); font-style: italic; }
+
+    .bio-links {
       display: flex;
-      gap: 20px;
-      margin-top: 36px;
+      gap: 0;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
       flex-wrap: wrap;
     }
 
-    .home-links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 13px;
+    .bio-links a {
+      font-size: 11px;
       color: var(--muted);
       text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
-    .home-links a:hover {
-      color: var(--text);
-      border-color: var(--text);
-    }
-
-    /* DIVIDER */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 56px 0;
-    }
-
-    /* SECTION LABEL */
-    .section-label {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--faint);
-      margin-bottom: 28px;
+      letter-spacing: 0.1em;
+      padding: 4px 16px;
+      border-right: 1px solid var(--border);
+      transition: color 0.15s;
     }
 
-    /* WORK ITEMS */
-    .work-item {
-      margin-bottom: 40px;
+    .bio-links a:first-child { padding-left: 0; }
+    .bio-links a:last-child { border-right: none; }
+    .bio-links a:hover { color: var(--accent); }
+
+    .currently {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+      font-style: italic;
     }
+
+    /* WORK */
+    .page-header {
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h2 {
+      font-size: 20px;
+      font-weight: normal;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .page-header p {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .work-item { margin-bottom: 36px; }
 
     .work-item h3 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: normal;
-      font-family: 'Georgia', serif;
       color: var(--text);
       margin-bottom: 6px;
+      border-bottom: 1px solid var(--accent-light);
+      padding-bottom: 4px;
     }
 
     .work-item p {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--muted);
-      line-height: 1.7;
-      max-width: 520px;
-      margin-bottom: 10px;
+      line-height: 1.75;
+      margin-bottom: 8px;
     }
 
-    .work-meta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+    .work-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 
     .tag {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       color: var(--muted);
-      background: var(--border);
-      padding: 2px 8px;
-      border-radius: 3px;
-      letter-spacing: 0.02em;
+      border: 1px solid var(--border);
+      padding: 1px 7px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .work-link {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 12px;
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .work-link:hover {
-      color: var(--text);
-      border-color: var(--muted);
-    }
-
-    /* RESEARCH BADGE */
-    .research-badge {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 11px;
-      color: #5a7a5a;
-      background: #eef4ee;
-      padding: 2px 8px;
-      border-radius: 3px;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--accent-light);
+    }
+
+    .work-link:hover { border-bottom-color: var(--accent); }
+
+    .research-badge {
+      font-size: 10px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 1px 7px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
     }
 
     /* WRITING */
     .writing-note {
-      font-size: 15px;
+      font-size: 14px;
       color: var(--muted);
       font-style: italic;
-      line-height: 1.8;
-      margin-bottom: 40px;
+      line-height: 1.85;
     }
-
-    .writing-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .writing-item:first-of-type {
-      border-top: 1px solid var(--border);
-    }
-
-    .writing-item:hover .writing-title {
-      color: var(--muted);
-    }
-
-    .writing-title {
-      font-size: 15px;
-      font-family: 'Georgia', serif;
-      color: var(--text);
-      transition: color 0.15s;
-    }
-
-    .writing-date {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 12px;
-      color: var(--faint);
-      white-space: nowrap;
-      margin-left: 20px;
-    }
-
-    /* PAGE TITLE */
-    .page-title {
-      font-size: 22px;
-      font-weight: normal;
-      font-family: 'Georgia', serif;
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-
-    .page-subtitle {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 52px;
-      line-height: 1.7;
-    }
-
-    /* HIDDEN PAGES */
-    .page { display: none; }
-    .page.active { display: block; }
 
     /* FOOTER */
     footer {
-      max-width: 640px;
-      margin: 0 auto;
-      padding-bottom: 48px;
+      margin-top: 40px;
+      padding-top: 16px;
       border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     footer p {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--faint);
-      padding-top: 24px;
+      letter-spacing: 0.06em;
+      font-style: italic;
+    }
+
+    footer .stamp {
+      font-size: 10px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 2px 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="#" onclick="showPage('home')">Muhiim Ali</a>
-  <div class="links">
-    <a href="#" onclick="showPage('work')" id="nav-work">work</a>
-    <a href="#" onclick="showPage('writing')" id="nav-writing">writing</a>
-    <a href="mailto:muhiim_ali@brown.edu">contact</a>
-  </div>
-</nav>
+<div class="page-wrap">
 
-<main>
+  <nav>
+    <span class="logo" onclick="showPage('home')">Muhiim Ali</span>
+    <div class="nav-links">
+      <a onclick="showPage('work')" id="nav-work">Work</a>
+      <span class="nav-sep">·</span>
+      <a onclick="showPage('writing')" id="nav-writing">Writing</a>
+      <span class="nav-sep">·</span>
+      <a href="mailto:muhiim_ali@brown.edu">Contact</a>
+    </div>
+  </nav>
 
   <!-- HOME -->
   <div class="page active" id="page-home">
-    <div class="home-intro">
-      <!-- <h1>hi, I'm Muhiim.</h1>
-      <p>
-        I grew up in <span class="name-meaning">Somaliland<span class="tooltip">an unrecognized country in the Horn of Africa</span></span> — a country most maps leave blank.
-        At eleven, I secretly took an entrance exam for a boarding school without telling my parents.
-        I passed. That one decision opened every door that followed.
+    <div class="home-header">
+      <div class="home-photo">
+        <img src="assets/images/muhiim2.jpeg" alt="Muhiim Ali" />
+        <!-- <p class="home-photo-caption">Somaliland → Providence</p> -->
+      </div>
+      <div class="home-title">
+        <h1>hi, I'm <span class="accent">Muhiim<span class="tooltip">muhiim — important, in Somali</span></span>.</h1>
+        <p class="tagline">It means 'important' in Somali. I'm working on living up to that.</p>
+      </div>
+    </div>
+
+    <div class="bio">
+      <p>At 11 years old, I secretly took the entrance exam to a boarding school in
+        <span class="accent" style="font-style:italic;">Somaliland<span class="tooltip">, an unrecognized country in the Horn of Africa</span></span>
+        ,simply to escape household chores and the traditional expectations placed on girls.
+        I never imagined that decision would lead me to the United States for my education —
+        let alone to Brown University, where I earned both my bachelor's and master's degrees
+        in computer science <em>(my mom still doesn't know what an Ivy League school is).</em>
       </p>
-      <p>
-        Those doors led to Brown University, where I finished both a bachelor's and master's in
-        computer science. My work focuses on AI and machine learning — building models that are
-        more transparent, more equitable, and useful in places that usually get left out of the conversation.
-        I care especially about vision-language understanding and making AI safer.
+      <p>Since then, I've contributed to AI research and served as a teaching assistant for
+        several CS courses at Brown. I'm particularly interested in using AI to address
+        unemployment and expand access in places like home.
       </p>
-      <p>
-        I also think about Somaliland a lot. Seventy percent of its youth are unemployed.
-        I want to help change that — through technology, and someday through an all-female gym
-        where women can discover what their bodies can do.
-      </p>
-      <p>
-        My mom named me <span class="name-meaning">Muhiim<span class="tooltip">muhiim — important, in Somali</span></span>.
-        I'm still figuring out what that means.
-      </p> -->
-      <div class="home-links">
+      <p>Outside of work, I enjoy calisthenics, soccer, strength training, and chasing a runner's high.</p>
+
+      <div class="bio-links">
         <a href="https://github.com/MuhiimAli" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/muhiim-ali-4a3788260/" target="_blank">LinkedIn</a>
         <!-- <a href="https://muhiimali.github.io/resume/" target="_blank">Resume</a> -->
         <a href="mailto:muhiim_ali@brown.edu">Email</a>
       </div>
-      <div class="currently">
-        <p>Currently looking for roles in AI/ML research and engineering.</p>
-        <p>When I'm not coding: learning calisthenics, playing pickup soccer.</p>
-      </div>
+      <p class="currently">Currently looking for roles in AI/ML research and engineering.</p>
     </div>
   </div>
 
   <!-- WORK -->
   <div class="page" id="page-work">
-    <p class="page-title">Work</p>
-    <p class="page-subtitle">Research and projects, roughly in order of what I'm proudest of.</p>
+    <div class="page-header">
+      <h2>Work</h2>
+      <!-- <p>Research and projects, roughly in order of what I'm proudest of.</p> -->
+    </div>
 
     <p class="section-label">Research</p>
 
     <div class="work-item">
       <h3>DRIVE — Dynamic Relation Inference via Verb Embeddings</h3>
-      <p>
-        A new method for improving how vision-language models understand relationships between
+      <p>A new method for improving how vision-language models understand relationships between
         objects in images. Built CROCO, a refined dataset from COCO that distinguishes static
         from dynamic visual relationships, and designed a contrastive loss function that
-        outperforms existing approaches on the task.
-      </p>
+        outperforms existing approaches on the task.</p>
       <div class="work-meta">
         <span class="tag">Computer Vision</span>
         <span class="tag">NLP</span>
@@ -391,16 +393,14 @@
       </div>
     </div>
 
-    <hr class="divider" style="margin: 36px 0;" />
+    <hr class="divider" />
     <p class="section-label">Projects</p>
 
     <div class="work-item">
       <h3>Cryptographic Voting for Multiple Candidates</h3>
-      <p>
-        Secure voting system for k-of-t elections using additively homomorphic ElGamal
+      <p>Secure voting system for k-of-t elections using additively homomorphic ElGamal
         encryption, zero-knowledge proofs, blind RSA signatures, and threshold decryption.
-        End-to-end verifiable while preserving ballot secrecy.
-      </p>
+        End-to-end verifiable while preserving ballot secrecy.</p>
       <div class="work-meta">
         <span class="tag">Cryptography</span>
         <span class="tag">C++</span>
@@ -410,10 +410,8 @@
 
     <div class="work-item">
       <h3>BERT Question-Answering System</h3>
-      <p>
-        Fine-tuned BERT for extractive QA on the Natural Questions benchmark. Custom loss
-        functions and preprocessing brought competitive F1 (53.8%) without architectural changes.
-      </p>
+      <p>Fine-tuned BERT for extractive QA on the Natural Questions benchmark. Custom loss
+        functions and preprocessing brought competitive F1 (53.8%) without architectural changes.</p>
       <div class="work-meta">
         <span class="tag">NLP</span>
         <span class="tag">Python</span>
@@ -423,10 +421,8 @@
 
     <div class="work-item">
       <h3>Reddit Depression Detection</h3>
-      <p>
-        ML pipeline to detect depression signals in Reddit posts, combining LDA topic
-        modeling and RoBERTa embeddings as features for random forest classifiers.
-      </p>
+      <p>ML pipeline to detect depression signals in Reddit posts, combining LDA topic
+        modeling and RoBERTa embeddings as features for random forest classifiers.</p>
       <div class="work-meta">
         <span class="tag">NLP</span>
         <span class="tag">Machine Learning</span>
@@ -436,10 +432,8 @@
 
     <div class="work-item">
       <h3>Craigslist Price Predictor</h3>
-      <p>
-        Multimodal price prediction combining VGG16 image features and spaCy text
-        embeddings with gradient boosting. Handles both visual and textual listing data.
-      </p>
+      <p>Multimodal price prediction combining VGG16 image features and spaCy text
+        embeddings with gradient boosting. Handles both visual and textual listing data.</p>
       <div class="work-meta">
         <span class="tag">Computer Vision</span>
         <span class="tag">NLP</span>
@@ -451,29 +445,26 @@
 
   <!-- WRITING -->
   <div class="page" id="page-writing">
-    <p class="page-title">Writing</p>
-    <p class="page-subtitle">Essays on things I'm learning, thinking about, and trying to figure out.</p>
-
-    <p class="writing-note">
-      Nothing here yet. I write when something feels important enough to slow down for —
-      when I've lived with an idea long enough that writing it down might actually help
-      someone else. Check back.
-    </p>
+    <div class="page-header">
+      <h2>Writing</h2>
+      <p>Essays on things I'm learning, thinking about, and trying to figure out.</p>
+    </div>
+    <p class="writing-note">Loading...</p>
   </div>
 
-</main>
+  <footer>
+    <span class="stamp">AI/ML · Open to work</span>
+  </footer>
 
-<footer>
-  <p>Muhiim Ali · Somaliland → Providence → what's next</p>
-</footer>
+</div>
 
 <script>
   function showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + name).classList.add('active');
-    document.querySelectorAll('nav .links a').forEach(a => a.classList.remove('active'));
-    const navEl = document.getElementById('nav-' + name);
-    if (navEl) navEl.classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const el = document.getElementById('nav-' + name);
+    if (el) el.classList.add('active');
     window.scrollTo(0, 0);
   }
 </script>

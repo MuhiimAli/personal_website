@@ -212,6 +212,14 @@
       font-style: italic;
     }
 
+    .footnote {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--faint);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
     /* WORK / WRITING */
     .page-header {
       margin-bottom: 48px;
@@ -246,6 +254,9 @@
       font-weight: normal;
       color: var(--text);
       margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(to right, transparent, var(--accent-light) 20%, var(--accent-light) 80%, transparent) 1;
     }
 
     .work-item p {
@@ -287,6 +298,8 @@
 
     .divider {
       border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
       margin: 40px 0;
     }
 
@@ -347,12 +360,10 @@
     }
 
     footer .stamp {
-      font-size: 10px;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 2px 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--faint);
+      font-style: italic;
+      letter-spacing: 0.03em;
     }
   </style>
 </head>
@@ -376,7 +387,7 @@
 
     <div class="home-hero">
       <h1>hi, I'm <span class="accent">Muhiim</span></h1>
-      <p class="tagline">It means 'important' in Somali. I'm working on living up to that.</p>
+      <p class="tagline">It means "important" in Somali. I'm still working on living up to that.</p>
     </div>
 
     <div class="home-grid">
@@ -388,17 +399,19 @@
 
       <div class="bio">
         <p>At 12 years old, I secretly took the entrance exam to a boarding school in
-          <span class="accent" style="font-style:italic;">Somaliland<span class="tooltip">an unrecognized country in the Horn of Africa</span></span>
-          simply to escape household chores and the traditional expectations placed on girls.
-          I never imagined that decision would lead me to the United States for my education —
-          let alone to Brown University, where I earned both my bachelor's and master's degrees
-          in computer science <em>(my mom still doesn't know what an Ivy League school is).</em>
+          <span class="accent" style="font-style:italic;">Somaliland<span class="tooltip">an unrecognized country in the Horn of Africa</span></span>,
+          mostly to escape household chores and the traditional expectations placed on girls.
+          I never imagined that decision would eventually bring me to the United States for my
+          education, let alone to Brown University, where I earned both my bachelor's and
+          master's degrees in computer science <em>(my mom still doesn't know what an Ivy League school is).</em>
         </p>
         <p>Since then, I've contributed to AI research and served as a teaching assistant for
-          several CS courses at Brown. I'm particularly interested in using AI to address
-          unemployment and expand access in places like home.
+          several computer science courses at Brown. I'm passionate about education and learning
+          in all its forms: how humans learn, how machines learn, and how we can build AI systems
+          that help people access knowledge and opportunity.
         </p>
         <p>Outside of work, I enjoy <a href="https://www.tiktok.com/@motionindirac" target="_blank" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-light);">calisthenics</a>, soccer, strength training, and chasing a runner's high.</p>
+        <p class="footnote">✦ "Aqoon la'aani waa iftiin la'aan" — a Somali proverb meaning "without knowledge, there is no light."</p>
 
         <div class="bio-links">
           <a href="https://github.com/MuhiimAli" target="_blank" title="GitHub">
@@ -411,7 +424,6 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
           </a>
         </div>
-        <p class="currently">Currently looking for roles in AI/ML research and engineering.</p>
       </div>
     </div>
   </div>
@@ -513,7 +525,7 @@
   </div>
 
   <footer>
-    <span class="stamp">AI/ML · Open to work</span>
+    <span class="stamp">© Muhiim Ali</span>
   </footer>
 
 </div>

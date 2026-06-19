@@ -37,10 +37,8 @@
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      padding-bottom: 20px;
-      margin-bottom: 56px;
-      border-bottom: 1px solid transparent;
-      border-image: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent) 1;
+      padding-bottom: 0;
+      margin-bottom: 64px;
     }
 
     .logo {
@@ -98,9 +96,6 @@
 
     .home-hero h1 .accent {
       color: var(--accent);
-      border-bottom: 2px dotted var(--accent);
-      cursor: default;
-      position: relative;
     }
 
     .home-hero h1 .accent .tooltip {
@@ -132,9 +127,7 @@
       grid-template-columns: 200px 1fr;
       gap: 52px;
       align-items: start;
-      padding-top: 36px;
-      border-top: 1px solid transparent;
-      border-image: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent) 1;
+      padding-top: 0;
     }
 
     /* PHOTO */
@@ -197,26 +190,18 @@
 
     .bio-links {
       display: flex;
-      margin-top: 28px;
-      padding-top: 20px;
-      border-top: 1px solid transparent;
-      border-image: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent) 1;
+      margin-top: 36px;
       flex-wrap: wrap;
+      gap: 24px;
     }
 
     .bio-links a {
-      font-size: 11px;
       color: var(--muted);
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 4px 16px;
-      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
       transition: color 0.15s;
     }
-
-    .bio-links a:first-child { padding-left: 0; }
-    .bio-links a:last-child { border-right: none; }
     .bio-links a:hover { color: var(--accent); }
 
     .currently {
@@ -261,8 +246,6 @@
       font-weight: normal;
       color: var(--text);
       margin-bottom: 6px;
-      border-bottom: 1px solid var(--accent-light);
-      padding-bottom: 4px;
     }
 
     .work-item p {
@@ -304,9 +287,7 @@
 
     .divider {
       border: none;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
-      margin: 32px 0;
+      margin: 40px 0;
     }
 
     /* WRITING */
@@ -360,9 +341,7 @@
     /* FOOTER */
     footer {
       margin-top: 64px;
-      padding-top: 20px;
-      border-top: 1px solid transparent;
-      border-image: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent) 1;
+      padding-top: 0;
       display: flex;
       justify-content: flex-end;
     }
@@ -396,7 +375,7 @@
   <div class="page active" id="page-home">
 
     <div class="home-hero">
-      <h1>hi, I'm <span class="accent">Muhiim<span class="tooltip">muhiim — important, in Somali</span></span>.</h1>
+      <h1>hi, I'm <span class="accent">Muhiim</span></h1>
       <p class="tagline">It means 'important' in Somali. I'm working on living up to that.</p>
     </div>
 
@@ -404,17 +383,11 @@
       <div class="home-photo">
         <div class="photo-rotator">
           <img class="photo-slide active" src="assets/images/muhiim2.jpeg" alt="Muhiim Ali" />
-          <img class="photo-slide" src="assets/images/1.jpeg" alt="Muhiim Ali" />
-          <img class="photo-slide" src="assets/images/2.JPG" alt="Muhiim Ali" />
-          <img class="photo-slide" src="assets/images/muhiim.jpg" alt="Muhiim Ali" />
-          <img class="photo-slide" src="assets/images/4.jpeg" alt="Muhiim Ali" />
-          <img class="photo-slide" src="assets/images/5.jpeg" alt="Muhiim Ali" />
-          <img class="photo-slide" src="assets/images/6.jpeg" alt="Muhiim Ali" />
         </div>
       </div>
 
       <div class="bio">
-        <p>At 11 years old, I secretly took the entrance exam to a boarding school in
+        <p>At 12 years old, I secretly took the entrance exam to a boarding school in
           <span class="accent" style="font-style:italic;">Somaliland<span class="tooltip">an unrecognized country in the Horn of Africa</span></span>
           simply to escape household chores and the traditional expectations placed on girls.
           I never imagined that decision would lead me to the United States for my education —
@@ -428,9 +401,15 @@
         <p>Outside of work, I enjoy <a href="https://www.tiktok.com/@motionindirac" target="_blank" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-light);">calisthenics</a>, soccer, strength training, and chasing a runner's high.</p>
 
         <div class="bio-links">
-          <a href="https://github.com/MuhiimAli" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/muhiim-ali-4a3788260/" target="_blank">LinkedIn</a>
-          <a href="mailto:muhiim_ali@brown.edu">Email</a>
+          <a href="https://github.com/MuhiimAli" target="_blank" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/muhiim-ali-4a3788260/" target="_blank" title="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="mailto:muhiim_ali@brown.edu" title="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
         </div>
         <p class="currently">Currently looking for roles in AI/ML research and engineering.</p>
       </div>
@@ -540,15 +519,6 @@
 </div>
 
 <script>
-  // Photo rotator
-  const slides = document.querySelectorAll('.photo-slide');
-  let current = 0;
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 3500);
-
   function showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + name).classList.add('active');
